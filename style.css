@@ -1,0 +1,212 @@
+/* ========================================== 
+ LUNABELLE 
+PRE-ENTREGA 07 fusionada con las entregas  4 y 6 de la libreria LunaBelle.
+========================================== */ 
+/* ========================================== 
+CONFIGURACIÓN GENERAL ========================================== */ 
+* { box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+} 
+body { 
+    font-family: Arial, sans-serif; 
+    background: linear-gradient(135deg, #f98df5, #34ede0); 
+    color: #ff1bb3; 
+    min-height: 100vh; 
+} 
+/* ========================================== 
+HEADER 
+========================================== */
+header {
+     background: linear-gradient(135deg, #62daf2, #bb5fe2); 
+     color: rgb(187, 83, 199); 
+     text-align: center; 
+     padding: 35px 20px; 
+     box-shadow: 0 4px 12px rgba(63, 218, 202, 0.15); 
+    }
+     header h1 { 
+        font-size: 42px; 
+        margin-bottom: 10px;
+     } 
+     header p { 
+        font-size: 18px; 
+    } 
+/* ========================================== 
+MAIN 
+========================================== */ 
+main { 
+    max-width: 1100px; 
+    margin: auto; 
+    padding: 30px 20px; 
+} 
+/* ========================================== 
+SECCIONES 
+========================================== */ 
+section { 
+    background-color: rgb(249, 136, 223); 
+    padding: 25px;
+    margin-bottom: 25px; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(132, 223, 133, 0.15);
+ } 
+ h2 {
+     color: #82e4b3; 
+     margin-bottom: 18px; 
+     font-size: 25px; 
+    } 
+/* ========================================== 
+FORMULARIO 
+========================================== */ 
+form { 
+    display: grid;
+     gap: 12px;
+    } 
+    input { 
+        width: 100%; 
+        padding: 13px; 
+        border: 2px solid #31dee4;
+         border-radius: 8px; 
+         font-size: 16px;
+         outline: none;
+          transition: 0.4s;
+         } 
+         input:focus { 
+            border-color: #5fd5ed; 
+            box-shadow: 0 0 5px rgba(49, 137, 151, 0.3);
+         } 
+/* ========================================== 
+BOTÓN AGREGAR 
+========================================== */ 
+button {
+     padding: 13px 18px; 
+     border: none; 
+     border-radius: 8px;
+     background-color: #8bebb8;
+     color: rgb(205, 20, 181); 
+     font-size: 17px; 
+     font-weight: bold;
+     cursor: pointer; 
+     transition: 0.4s;
+     }
+      button:hover { 
+        background-color: #41d9ea; 
+        transform: translateY(-2px);
+     } 
+/* ==========================================
+ MENSAJE DE FEEDBACK 
+========================================== */
+ #mensaje {
+     display: none; 
+     padding: 14px; 
+     margin-top: 15px; 
+     border-radius: 8px; 
+     background-color: #60d7b7; 
+     color: #cb43cb; 
+     font-weight: bold; 
+     text-align: center; 
+    } 
+    #mensaje.visible {  
+        display: block; 
+    } 
+/* ========================================== 
+BUSCADOR 
+========================================== */ 
+#buscador {
+     border-color: #46d8e9; 
+    }
+    #buscador:focus { 
+        border-color: #218c7a; 
+    }
+/* ========================================== 
+CONTENEDOR DE LIBROS 
+========================================== */ 
+#contenedor-items { 
+    display: grid;
+    grid-template-columns: repeat( 
+        auto-fit, 
+        minmax(230px, 1fr)
+        );
+         gap: 20px;
+     } 
+/* ========================================== 
+TARJETAS DE LIBROS 
+========================================== */ 
+.libro {
+     background: linear-gradient(145deg, #f9edff, #eef7ff); 
+     border: 2px solid #67bde9; 
+     border-radius: 12px;
+      padding: 30px; 
+      transition: 0.5s;
+     } 
+.libro:hover {
+     transform: translateY(-8px);
+     box-shadow: 0 8px 18px rgba(31, 246, 217, 0.953); 
+    } 
+.libro h3 {
+     color: #c48ef6;
+      margin-bottom: 17px; 
+      font-size: 20px; 
+    } 
+.libro p {
+     margin-bottom: 10px;
+     line-height: 1.25; 
+    } 
+.libro strong { color: #020505; 
+} 
+/* ========================================== 
+BOTÓN ELIMINAR
+ ========================================== */ 
+.btn-eliminar { 
+     background-color: #a6f1e9;
+     margin-top: 12px;
+      width: 100%; 
+    } 
+.btn-eliminar:hover { 
+     background-color: #5ccfe0; 
+    } 
+/* ==========================================
+ SIN RESULTADOS 
+ ========================================== */ 
+.sin-resultados { 
+     grid-column: 1 / -1;
+     text-align: center; 
+     padding: 25px; 
+     background-color: rgb(151, 245, 165); 
+     border-radius: 10px; 
+     color: #65ed8c; 
+     font-size: 10px; 
+    } 
+/* ========================================== 
+FOOTER 
+========================================== */ 
+footer {
+     background-color: #bcfbba; 
+     color: rgb(20, 4, 22); 
+     text-align: center; 
+     padding: 20px; 
+     margin-top: 30px;
+    } 
+/* ========================================== 
+DISEÑO RESPONSIVE 
+========================================== */ 
+@media (max-width: 600px) {
+     header h1 { 
+        font-size: 20px;
+     } 
+     header p {
+         font-size: 15px;
+     } 
+     main { 
+         padding: 10px 12px;
+        } 
+    section { 
+         padding: 20px; 
+    } 
+    #contenedor-items {
+         grid-template-columns: 1fr; 
+    } 
+    .libro h3 {
+         font-size: 15px; 
+        } 
+    }
+
